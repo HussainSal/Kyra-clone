@@ -3,6 +3,10 @@ import styles from "./Project.module.css";
 import ButtonPrimary from "@/components/partials/ButtonPrimary/ButtonPrimary";
 import Image from "next/image";
 import img1 from "@/assets/images/project-img-1.jpg";
+import img2 from "@/assets/images/Clorpop.jpeg"
+import img3 from "@/assets/images/Linkedin.jpeg"
+import img4 from "@/assets/images/Lancome.jpeg"
+
 
 const projectData = [
   {
@@ -17,7 +21,7 @@ const projectData = [
     location: "PARIS",
     btn: "linkedin",
     text: "#lancomeskincare",
-    img: img1,
+    img: img2,
     description:
       "skin care regimes are becoming more and more important to gen z. this creator campaign put lancome right at hte center of the conversation on tiktok",
   },
@@ -25,7 +29,7 @@ const projectData = [
     title: "COLOURPOP",
     btn: "colourpop",
     text: "#thisiseverything",
-    img: img1,
+    img: img3,
     description:
       "the first campaign delivered exclusively througn the kyra platform and it smashed all expectations. celebrating colourpop's launch in the in target, kyra creators were tasked to create noise on tiktok drive footfall",
   },
@@ -33,7 +37,7 @@ const projectData = [
     title: "VITA <br /> COCO",
     btn: "vita coca",
     text: "igniting vita coco's tiktok channel ",
-    img: img1,
+    img: img4,
     description:
       "growing vita coco's follower base by 1000%+ in just 3 months creating original content in line with trends on the platform.",
   },
@@ -78,7 +82,7 @@ const Project = () => {
               }`}
             >
               <div className={styles.imgContainer}>
-                <Image className={styles.img} src={img1} alt="img" />
+                <Image className={styles.img} src={item.img} alt={item.title} />
               </div>
               <div className={styles.projectTextContainer}>
                 <h2

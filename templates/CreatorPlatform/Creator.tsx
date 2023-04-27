@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import styles from "./Creator.module.css"
 import ActiveBanner from '@/components/ActiveBanner/ActiveBanner'
 import BannerSelect from '@/components/BannerSelect/BannerSelect'
-import banner1 from "@/assets/images/bannerimage1.jpeg"
-import banner2 from "@/assets/images/bannerimage2.jpeg"
+import banner1 from "@/assets/images/Creator3.jpeg"
+import banner2 from "@/assets/images/Campaign2.jpeg"
 import banner3 from "@/assets/images/bannerimage3.jpeg"
-import banner4 from "@/assets/images/bannerimage4.jpeg"
+import banner4 from "@/assets/images/Optimize2.png"
+import banner5 from "@/assets/images/Dashboard.png"
+
 import { StaticImageData } from 'next/image'
 import ButtonPrimary from '@/components/partials/ButtonPrimary/ButtonPrimary'
 
@@ -38,7 +40,7 @@ const content = [
     {
         id:5,
         title:"real-time dashboards",
-        img:banner3
+        img:banner5
 
     }
 ]

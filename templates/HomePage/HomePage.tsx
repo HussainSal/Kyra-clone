@@ -29,9 +29,12 @@ const HomePage = () => {
       <HomeText />
 </div>
     
+    <div className={styles.video_container} >
+
       <video autoPlay muted loop playsInline  className={styles.video}  >
           <source src="/video2.mp4" type="video/mp4"/>
       </video>
+    </div>
     <div className={styles.scroll} >
       <Marquee speed={100}>
          {/* <Slider {...settings} className={styles.slide}> */}
