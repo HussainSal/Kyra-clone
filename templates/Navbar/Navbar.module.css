@@ -1,0 +1,22 @@
+.container{
+    height: 10vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    z-index: 1000;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: center;
+
+    /* background-color: red; */
+}
+
+.imageContainer{
+    margin-left: 50px;
+    filter :drop-shadow(3px 2px 1px black)
+}
+
+.nav_options{
+        margin-right: 50px;
+
+}

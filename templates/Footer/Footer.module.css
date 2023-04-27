@@ -1,0 +1,73 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #BBEF44;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text_container{
+    text-align: center;
+
+}
+
+.text_container_inner{
+
+    display: flex;
+    gap: 55px;
+    margin-bottom: 25px;
+    
+}
+
+
+
+.footer_options {
+    font-size: 30px;
+    cursor: pointer;
+    max-width: 700px ;
+}
+
+.innerContainer{
+    width: 100vw;
+    /* background-color: red; */
+    
+}
+
+.imageContainer{
+    /* justify-self:   baseline; */
+    /* align-self: baseline; */
+    justify-self: baseline;
+}
+
+
+/* SIGNUP PAGE */
+
+.signup_container{
+    background-color: black;
+    color: #BBEF44;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.impact_text{
+        font-size: 70px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        max-width: 950px;
+        transform: skew(-19deg);
+    }
+    
+    .footer_options_container{
+    margin: auto;
+    text-align: center;
+}
+
+.buttonContainer{
+    margin-top: 50px;
+}
