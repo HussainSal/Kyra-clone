@@ -1,9 +1,7 @@
 import React from 'react'
-import styles from "./HomePage.module.css"
 import HomeText from './HomeText'
-import Slider from 'react-slick'
 import Marquee from 'react-fast-marquee';
-// import Video from 'react-responsive-video'
+import styles from "./custom.module.css"
 
 
 const imagesData = [1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14,15,16,17];
