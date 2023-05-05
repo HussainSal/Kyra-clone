@@ -11,7 +11,6 @@
 
 .text_container{
     text-align: center;
-
 }
 
 .text_container_inner{
@@ -32,7 +31,6 @@
 
 .innerContainer{
     width: 100vw;
-    /* background-color: red; */
     
 }
 
@@ -71,3 +69,54 @@
 .buttonContainer{
     margin-top: 50px;
 }
+
+.copyright{
+    font-size: 2rem;
+}
+
+
+@media (max-width :1000px) {
+    .footer_options{
+        font-size: 30px;
+    }
+}
+
+
+@media (max-width :700px) {
+    .footer_options{
+        font-size: 20px;
+    }
+
+    .text_container_inner{
+        margin-top: 200px;
+        flex-direction: column;
+        gap: 20px ;
+    }
+    
+    .impact_text{
+        font-size: 45px;
+        transform: skew(-4deg);
+
+    }
+    .text_container{
+        padding-right: 30px;
+        padding-left: 30px;
+
+    }
+
+    .copyright{
+    font-size: 1.5rem;
+}
+}
+
+@media (max-width :380px) {
+     .impact_text{
+        font-size: 35px;
+        transform: skew(-4deg);
+    }
+
+    .footer_options{
+        font-size: 15px;
+    }
+}
+

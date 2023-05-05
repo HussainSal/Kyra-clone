@@ -11,3 +11,10 @@
 .hoverActive{
     transition: all .2s;
 }
+
+@media (max-width:560px){
+    .container{
+        width: 280px;
+        height: 360px;
+    }
+}

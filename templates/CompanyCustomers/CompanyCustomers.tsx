@@ -3,15 +3,16 @@ import styles from "./CompanyCustomers.module.css";
 import Slider from "react-slick";
 import { ScrollTrigger as GsapScrollTrigger } from "@/assets/gsap/src/ScrollTrigger";
 import { gsap } from "gsap";
-import logo1 from '@/assets/images/logo-1.svg';
-import logo2 from '@/assets/images/logo-13.svg';
-import logo3 from '@/assets/images/logo-3.svg';
-import logo4 from '@/assets/images/logo-4.svg';
-import logo5 from '@/assets/images/logo-5.svg';
-import logo6 from '@/assets/images/logo-13.svg';
-import logo7 from '@/assets/images/logo-11.svg';
-import logo8 from '@/assets/images/logo-8.svg';
+import logo1 from "@/assets/images/logo-1.svg";
+import logo2 from "@/assets/images/logo-13.svg";
+import logo3 from "@/assets/images/logo-3.svg";
+import logo4 from "@/assets/images/logo-4.svg";
+import logo5 from "@/assets/images/logo-5.svg";
+import logo6 from "@/assets/images/logo-13.svg";
+import logo7 from "@/assets/images/logo-11.svg";
+import logo8 from "@/assets/images/logo-8.svg";
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
 
 const imagesData = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8];
 
@@ -70,29 +71,43 @@ const settings = {
 
 const CompanyCustomers = () => {
   const [isMobile, setIsMobile] = useState(true);
+  const [responsiveCard, setResponsiveCard] = useState(false);
 
   useEffect(() => {
     // if (isMobile) return;
-    let ctx = gsap.context(() => {
-      gsap.registerPlugin(GsapScrollTrigger);
-      const tl = gsap.timeline();
-      const sections = gsap.utils.toArray(".card");
+    if (!responsiveCard) {
+      let ctx = gsap.context(() => {
+        gsap.registerPlugin(GsapScrollTrigger);
+        const tl = gsap.timeline();
+        const sections = gsap.utils.toArray(".card");
 
-      tl.to(".wrapper", {
-        duration: 10,
-        xPercent: -100 * (sections.length - 1),
-      });
+        tl.to(".wrapper", {
+          duration: 10,
+          xPercent: -100 * (sections.length - 1),
+        });
 
-      GsapScrollTrigger.create({
-        animation: tl,
-        trigger: ".wrapper",
-        start: "top bottom",
-        scrub: true,
-        end: "+=50000",
+        GsapScrollTrigger.create({
+          animation: tl,
+          trigger: ".wrapper",
+          start: "top bottom",
+          scrub: true,
+          end: "+=50000",
+        });
       });
-    });
-    return () => ctx.revert();
-  }, [isMobile]);
+      return () => ctx.revert();
+    }
+  }, [isMobile, responsiveCard]);
+
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      console.log(window.innerWidth, window.innerHeight, "Checking height");
+      if (window.innerWidth <= 600) {
+        setResponsiveCard(true);
+      }
+    }
+  }, []);
+
+  console.log(responsiveCard,"")
 
   return (
     <section id="brands" className={styles.section}>
@@ -105,25 +120,41 @@ const CompanyCustomers = () => {
 
         <div className={styles.img_container}>
           <Slider {...settings} className={styles.slide}>
+            {/* <Marquee speed={100}  > */}
             {imagesData.map((item) => (
               <div className={styles.img} key={item}>
                 <Image src={item} alt="logo" />
               </div>
             ))}
           </Slider>
+          {/* </Marquee> */}
         </div>
 
-        <div className={`${styles.cardContainer} wrapper`}>
-          {cardData.map((item, i) => (
-            <div key={i} className={`${styles.card} card`}>
-              <p>{`"${item.text}"`}</p>
-              <h5
-                dangerouslySetInnerHTML={{ __html: item.title }}
-                style={{ fontWeight: item.titleWeight }}
-              ></h5>
-            </div>
-          ))}
-        </div>
+        {!responsiveCard ? (
+          <div className={`${styles.cardContainer} wrapper`}>
+            {cardData.map((item, i) => (
+              <div key={i} className={`${styles.card} card`}>
+                <p>{`"${item.text}"`}</p>
+                <h5
+                  dangerouslySetInnerHTML={{ __html: item.title }}
+                  style={{ fontWeight: item.titleWeight }}
+                ></h5>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className={`${styles.cardContainer}`}>
+            {cardData.map((item, i) => (
+              <div key={i} className={`${styles.card}`}>
+                <p>{`"${item.text}"`}</p>
+                <h5
+                  // dangerouslySetInnerHTML={{ __html: item.title }}
+                  style={{ fontWeight: item.titleWeight }}
+                ></h5>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

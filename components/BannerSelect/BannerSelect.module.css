@@ -55,13 +55,10 @@
 
 .active_details{
     display: block;
-     width: 400px;
+    width: 400px;
     font-size: 1.5rem;
-        animation: trial .4s forwards ;
-                 padding-bottom: 15px;
-
-
-
+    animation: trial .4s forwards ;
+    padding-bottom: 15px;
 }
 
 
@@ -95,5 +92,33 @@
     100%{
         /* opacity: 0; */
         display: none;
+    }
+}
+
+
+@media  (max-width:1000px){
+    .container{
+        /* width: 90%; */
+        max-width: 600px ;
+    }
+}
+
+@media  (max-width:700px){
+    .container{
+        /* width: 90%; */
+        margin: auto;
+        max-width: 500px ;
+    }
+}
+
+@media  (max-width:560px){
+    .container{
+        /* width: 90%; */
+        margin: auto;
+        max-width: 300px ;
+    }
+
+    .active_details{
+        width: 300px;
     }
 }

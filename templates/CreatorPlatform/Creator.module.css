@@ -10,7 +10,6 @@
 }
 
 .impact_text{
-      
         font-size: 70px;
         letter-spacing: 1px;
         font-weight: bold;
@@ -46,4 +45,44 @@
     transform: translateY(2px);
 
  }
+
+  .solvingIssues_text_responsive{
+    display: none;
+ }
+ 
+
+/* Media Queries */
+
+@media (max-width:1500px){
+
+    .container{
+        text-align: center;
+    }
+
+    .main_container{
+    flex-direction: column-reverse;
+    
+        }   
+
+.impact_text_responsive{
+    margin: auto;
+}        
+
+ .solvingIssues_text{
+    display: none;
+ }
+   .solvingIssues_text_responsive{
+    font-size: 30px;
+    display: block;
+    margin: 35px 0px;
+ }
+ .bannerImg_responsive{
+     margin: auto;
+ }
+
+ .main_left_side{
+    margin: auto;  
+ }
+
+}
 
