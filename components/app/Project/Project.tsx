@@ -3,10 +3,9 @@ import styles from "./Project.module.css";
 import ButtonPrimary from "@/components/partials/ButtonPrimary/ButtonPrimary";
 import Image from "next/image";
 import img1 from "@/assets/images/project-img-1.jpg";
-import img2 from "@/assets/images/Clorpop.jpeg"
-import img3 from "@/assets/images/Linkedin.jpeg"
-import img4 from "@/assets/images/Lancome.jpeg"
-
+import img2 from "@/assets/images/Clorpop.jpeg";
+import img3 from "@/assets/images/Linkedin.jpeg";
+import img4 from "@/assets/images/Lancome.jpeg";
 
 const projectData = [
   {
@@ -59,7 +58,7 @@ const Project = () => {
             <br /> connect with creators and drive impactful results.
           </h4>
 
-          <div>
+          <div className={styles.btnsContainer}>
             {projectData.map((item) => (
               <ButtonPrimary
                 onClick={() => scrollToProject(item.btn)}
@@ -92,7 +91,9 @@ const Project = () => {
                 <h6 className={styles.text}>{item.text}</h6>
                 <p className={styles.description}>{item.description}</p>
 
-                <ButtonPrimary>sign up today</ButtonPrimary>
+                <ButtonPrimary className={styles.btn}>
+                  sign up today
+                </ButtonPrimary>
               </div>
             </div>
           ))}

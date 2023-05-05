@@ -5,11 +5,15 @@ const ButtonPrimary: React.FC<{
   children: string;
   buttonType?: "primary-big" | "primary-small" | "secondary-big";
   onClick?: () => void;
-}> = ({ children, buttonType, onClick }) => {
+  className?: string;
+}> = ({ children, buttonType, onClick, className }) => {
   const btnType = `${styles[buttonType ? buttonType : "primary-big"]}`;
 
   return (
-    <button onClick={onClick} className={`${styles.button} ${btnType}  `}>
+    <button
+      onClick={onClick}
+      className={`${styles.button} ${btnType} ${className} `}
+    >
       {children}
     </button>
   );

@@ -23,7 +23,7 @@ const HomePage = () => {
       </div>
 
       <div className={styles.video_container}>
-        <video autoPlay loop playsInline className={styles.video}>
+        <video autoPlay={true} loop playsInline className={styles.video}>
           <source src="/video2.mp4" type="video/mp4" />
         </video>
       </div>
