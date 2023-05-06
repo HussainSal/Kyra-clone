@@ -13,6 +13,7 @@ import logo7 from "@/assets/images/logo-11.svg";
 import logo8 from "@/assets/images/logo-8.svg";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
+import useWindowDimensions from "@/utils/hooks/useWindowDimesion";
 
 const imagesData = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8];
 
@@ -72,6 +73,7 @@ const settings = {
 const CompanyCustomers = () => {
   const [isMobile, setIsMobile] = useState(true);
   const [responsiveCard, setResponsiveCard] = useState(false);
+  const {width, height} = useWindowDimensions()
 
   useEffect(() => {
     // if (isMobile) return;
@@ -99,15 +101,27 @@ const CompanyCustomers = () => {
   }, [isMobile, responsiveCard]);
 
   useEffect(() => {
-    if (typeof window !== undefined) {
-      console.log(window.innerWidth, window.innerHeight, "Checking height");
-      if (window.innerWidth <= 600) {
-        setResponsiveCard(true);
-      }
-    }
-  }, []);
+    // if (typeof window !== undefined) {
+    //   console.log(window.innerWidth, window.innerHeight, "Checking height");
+    //   if (window.innerWidth <= 600) {
+    //     setResponsiveCard(true);
+    //   }
 
-  console.log(responsiveCard,"")
+    //       window.addEventListener("resize", updateDimensions);
+
+    // }
+
+     if(width && width <= 500){
+      setResponsiveCard(true)
+  }else{
+    setResponsiveCard(false)
+  }
+
+  }, [width]);
+
+
+ 
+  console.log("responsiveCard",width,height)
 
   return (
     <section id="brands" className={styles.section}>

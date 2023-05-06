@@ -75,7 +75,7 @@ const Creator = () => {
   console.log(banner, "bannerbanner");
 
   return (
-    <section className={styles.container}>
+    <section id="creator" className={styles.container}>
       {/* Heading  */}
       <h2 className={`${styles.impact_text} ${styles.impact_text_responsive} `}>
         our new creator platform

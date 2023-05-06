@@ -50,7 +50,7 @@ const Project = () => {
   };
 
   return (
-    <section id="creator" className={styles.projectSection}>
+    <section id="carrer" className={styles.projectSection}>
       <div className={styles.innerContainer}>
         <div className={styles.textContainer}>
           <h4>
