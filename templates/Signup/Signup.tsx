@@ -6,7 +6,7 @@ const Signup = () => {
   return (
     <div id='carrers' className={`${styles.container} ${styles.signup_container}`} >
         <div className={styles.text_container}>
-            <h3 className={styles.impact_text} >
+            <h3 className={`${styles.impact_text} ${styles.margin} `} >
                 Want to start making an impact ?
             </h3>
 
