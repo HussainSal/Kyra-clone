@@ -14,17 +14,17 @@ import ButtonPrimary from "@/components/partials/ButtonPrimary/ButtonPrimary";
 const content = [
   {
     id: 1,
-    title: "worlds best creators",
+    title: "best creators",
     img: banner1,
   },
   {
     id: 2,
-    title: "faster campaign execution",
+    title: "faster campaign ",
     img: banner2,
   },
   {
     id: 3,
-    title: "flexibility on deliverables",
+    title: "flexibile deliverables",
     img: banner3,
   },
   {
