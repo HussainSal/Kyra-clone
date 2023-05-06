@@ -5,19 +5,21 @@ import svg from "@/assets/images/kyra-logo.svg";
 import NavOption from "@/components/NavOptions/NavOption";
 import NavOptionResponsive from "@/components/NavOptions/NavOptionResponsive";
 import { useAppContext } from "@/context/context";
+import { Link } from "react-scroll";
 
-const options = [
+
+const data = [
   {
-    id: "1",
-    text: "brands",
+    id: "creator",
+    title: "creator",
   },
   {
-    id: "2",
-    text: "creator",
+    id: "brands",
+    title: "brands",
   },
   {
-    id: "3",
-    text: "carrer",
+    id: "carrers",
+    title: "carrers",
   },
 ];
 
@@ -59,18 +61,27 @@ const Navbar: React.FC<{ getSection: (id: string) => void }> = ({
             : styles.responsive_options_hide
         }`}
       >
-        {options.map((cur) => {
+        {data.map((cur) => {
           return (
-            <p
-              onClick={() => {
-                ctx.setActiveTab(cur.text);
-                ctx.setEnableMenu(false);
-              }}
-              id={cur.id}
-              className={styles.responsive_options}
-            >
-              {cur.text}
-            </p>
+            // <p
+            //   onClick={() => {
+            //     ctx.setActiveTab(cur.title);
+            //     ctx.setEnableMenu(false);
+            //     console.log("clickedNavvv")
+            //   }}
+            //   id={cur.id}
+            //   className={styles.responsive_options}
+            // >
+            //   {cur.title}
+            // </p>
+
+              <Link to={cur.id} smooth={true} duration={1000}>
+                <div onClick={() => { console.log("clickedNvvv"); ctx.setEnableMenu(false)}} key={cur.id} className={styles.option} >
+
+              {cur.title}
+              </div>
+              </Link>
+              
           );
         })}
       </div>

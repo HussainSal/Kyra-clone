@@ -6,15 +6,15 @@ import ScrollLink from "../ScrollLink";
 const data = [
   {
     id: "creator",
-    title: "Creator",
+    title: "creator",
   },
   {
     id: "brands",
-    title: "Brands",
+    title: "brands",
   },
   {
     id: "carrers",
-    title: "Carrers",
+    title: "carrers",
   },
 ];
 
