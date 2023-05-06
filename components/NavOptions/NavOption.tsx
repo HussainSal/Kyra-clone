@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./NavOption.module.css";
-import Link from "next/link";
+import { Link } from "react-scroll";
 import ScrollLink from "../ScrollLink";
 
 const data = [
@@ -28,18 +28,22 @@ const NavOption: React.FC<{ getSection: (id: string) => void }> = ({
         {data.map((cur) => {
           return (
             // <ScrollLink href={`#${cur.id}`} >
-            <p
-              id={cur.id}
-              className={styles.option}
-              // onClick={() => {
-              //   scrollToPage(cur.id);
-              // }}
-              // href={`#${cur.id}`}
-              key={cur.id}
-            >
+            // <p
+            //   id={cur.id}
+            //   className={styles.option}
+            //   // onClick={() => {
+            //   //   scrollToPage(cur.id);
+            //   // }}
+            //   // href={`#${cur.id}`}
+            //   key={cur.id}
+            // >
+            <div key={cur.id} className={styles.option} >
+              <Link to={cur.id} smooth={true} duration={1000}>
+
               {cur.title}
-            </p>
-            // </ScrollLink>
+              </Link>
+</div>           
+ // </ScrollLink>
           );
         })}
       </div>
