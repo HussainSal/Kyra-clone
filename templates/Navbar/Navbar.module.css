@@ -13,34 +13,39 @@
 
 .imageContainer{
     /* margin-left: 50px; */
-    position: relative;
+    position: fixed;
     z-index: 10000;
     left: 5%;
     filter :drop-shadow(3px 2px 1px black)
 }
+
+.nav_options_responsive{
+        display: none;
+       
+    }
+
 
 .nav_options{
         margin-right: 50px;
 
 }
 
-.nav_options_responsive{
-        display: none;
-    }
 
     .overlay{
     /* background-color: #BBEF44; */
     width: 100%;
     height: 100vh;
     z-index: 10000;
-    transition: all .3s;
+    transition: all .8s;
+    /* border-radius: 50%; */
+/* transform: scale(1);     */
     overflow: hidden;
     background-image: linear-gradient(to right,rgb(187, 239, 68),rgb(187, 239, 68));
     /* position: relative; */
 }
 
 .notOverLay{
-        transition: all .3s;
+        transition: all .8s;
     /* overflow: hidden; */
 }
 
@@ -56,17 +61,15 @@
 
     .nav_options_responsive{
         display: block;
-        position: absolute;
+        position: fixed;
         right: 5%;
-        top: 35%;
+        top: 3%; 
     }
 
-    .resTop {
-        top: 5%;
-    }
+    
 
     .imageContainer{
-        position: absolute;
+        position: fixed;
         top: 0%;
     }
 

@@ -44,9 +44,9 @@ const Navbar: React.FC<{ getSection: (id: string) => void }> = ({
         <NavOption getSection={getSection} />
       </div>
       <div
-        className={`${styles.nav_options_responsive} ${
-          ctx.enableMenu ? styles.resTop : ""
-        } `}
+        className={`${styles.nav_options_responsive}
+        
+        `}
       >
         {/* <NavOption getSection={getSection} /> */}
         <NavOptionResponsive
@@ -63,18 +63,7 @@ const Navbar: React.FC<{ getSection: (id: string) => void }> = ({
       >
         {data.map((cur) => {
           return (
-            // <p
-            //   onClick={() => {
-            //     ctx.setActiveTab(cur.title);
-            //     ctx.setEnableMenu(false);
-            //     console.log("clickedNavvv")
-            //   }}
-            //   id={cur.id}
-            //   className={styles.responsive_options}
-            // >
-            //   {cur.title}
-            // </p>
-
+           
               <Link to={cur.id} smooth={true} duration={1000}>
                 <div onClick={() => { console.log("clickedNvvv"); ctx.setEnableMenu(false)}} key={cur.id} className={styles.option} >
 
