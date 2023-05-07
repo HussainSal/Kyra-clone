@@ -34,8 +34,7 @@ const Navbar: React.FC<{ getSection: (id: string) => void }> = ({
     <nav
       className={`${styles.container}`}
     >
-      <div className={ctx.enableMenu ? styles.overlay : styles.notOverLay
-} />
+      <div className={ctx.enableMenu ? styles.overlay : styles.notOverLay } />
       <div className={styles.imageContainer}>
         <Image src={svg} width={100} height={100} alt="logo" />
       </div>
@@ -43,6 +42,7 @@ const Navbar: React.FC<{ getSection: (id: string) => void }> = ({
       <div className={styles.nav_options}>
         <NavOption getSection={getSection} />
       </div>
+      
       <div
         className={`${styles.nav_options_responsive}
         
