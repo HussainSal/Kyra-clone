@@ -13,6 +13,7 @@ import logo7 from "@/assets/images/logo-11.svg";
 import logo8 from "@/assets/images/logo-8.svg";
 import Image from "next/image";
 import useWindowDimensions from "@/utils/hooks/useWindowDimesion";
+import { useAppContext } from "@/context/context";
 
 const imagesData = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8];
 
@@ -72,7 +73,7 @@ const settings = {
 const CompanyCustomers = () => {
   const [isMobile, setIsMobile] = useState(true);
   const [responsiveCard, setResponsiveCard] = useState(false);
-
+  const context = useAppContext()
   // taking out width and height from hook
   const {width, height} = useWindowDimensions()
 
@@ -103,6 +104,7 @@ const CompanyCustomers = () => {
 
   // code for enabling responsiveCard to true which will stop horizontal scrolling
   useEffect(() => {
+    context.setWidth(width);
      if(width && width <= 500){
       setResponsiveCard(true)
   }else{

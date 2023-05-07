@@ -27,14 +27,17 @@
 }
 
     .overlay{
-        position: fixed;
+        /* position: fixed;
         top: 5%;
-        right: 5%;
+        right: 5%; */
+         position: absolute;
+        top: 50%;
+        right: 9%;
         width: 10px;
         height: 10px;
         border-radius: 50%; 
-        transition: all 2s;
-        transform: scale(200);
+        transition: all .4s;
+        transform: scale(250);
         background-image: linear-gradient(to right,rgb(187, 239, 68),rgb(187, 239, 68));
         overflow: hidden;
 }
@@ -43,11 +46,11 @@
         transition: all .3s;
          position: absolute;
         top: 50%;
-        right: 9%;
+        right: 7%;
         width: 10px;
         height: 10px;
         border-radius: 50%; 
-        transition: all 2s;
+        transition: all .5s;
         background-image: linear-gradient(to right,rgb(187, 239, 68),rgb(187, 239, 68));
         overflow: hidden;
 }
@@ -57,6 +60,7 @@
     transition: all .4s;
 
 }
+
 
 @media (max-width:700px){
     .nav_options{
@@ -85,8 +89,8 @@
         justify-content: space-between;
         font-size: 3rem;
         font-weight: 600;
-        animation:  opacityHolder 2s ease-in-out;
-         transition: all 3s;
+        animation:  opacityHolder 1.5s ease-in-out;
+         transition: all .3s;
          z-index: 10000;
          position: relative;
          top: 200%;
