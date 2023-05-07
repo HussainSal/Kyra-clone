@@ -48,9 +48,7 @@ const Navbar: React.FC<{ getSection: (id: string) => void }> = ({
         
         `}
       >
-        {/* <NavOption getSection={getSection} /> */}
         <NavOptionResponsive
-        // activefn={activeHandler}
         />
       </div>
 

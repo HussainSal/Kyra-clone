@@ -127,13 +127,11 @@
 
 
   .cardContainer {
-  /* display: flex;
-  align-items: center; */
+
   flex-direction: column;
   column-gap: 30px;
   align-items: center;
   justify-content: center;
-  /* justify-content: flex-start; */
 }
 
 .img {

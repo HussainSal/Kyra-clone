@@ -7,8 +7,6 @@
     border-top: 3px solid black;
     transition: all .4s;
     cursor: pointer;
-    /* border-bottom: 3px solid black; */
-
 }
 
 .container p{
@@ -90,7 +88,6 @@
     }
 
     100%{
-        /* opacity: 0; */
         display: none;
     }
 }
@@ -98,14 +95,12 @@
 
 @media  (max-width:1000px){
     .container{
-        /* width: 90%; */
         max-width: 600px ;
     }
 }
 
 @media  (max-width:700px){
     .container{
-        /* width: 90%; */
         margin: auto;
         max-width: 500px ;
     }
@@ -113,7 +108,6 @@
 
 @media  (max-width:560px){
     .container{
-        /* width: 90%; */
         margin: auto;
         max-width: 300px ;
     }

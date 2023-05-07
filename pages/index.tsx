@@ -1,16 +1,11 @@
-import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import Footer from "@/templates/Footer/Footer";
 import Signup from "@/templates/Signup/Signup";
-import Project from "@/components/app/Project/Project";
+import Project from "@/templates/Project/Project";
 import Creator from "@/templates/CreatorPlatform/Creator";
 import CompanyCustomers from "@/templates/CompanyCustomers/CompanyCustomers";
 import HomePage from "@/templates/HomePage/HomePage";
 import Navbar from "@/templates/Navbar/Navbar";
-import { useEffect } from "react";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const getSection = (id: string) => {
@@ -20,26 +15,26 @@ export default function Home() {
 
   return (
     <div>
-      {/* hello */}
+      {/*Navbar */}
       <Navbar getSection={getSection} />
+
+       {/*Main Page */}
       <HomePage />
 
-      {/* <div id='creator'> */}
+      {/*Company customers page i.e where brands are displayed */}
       <CompanyCustomers />
-      {/* </div> */}
 
-      {/* <div id='carrers' > */}
+      {/*Projects page i.e where different project will be displayed eg:- Ebay,linkedin etc */}
       <Project />
-      {/* </div> */}
 
-      {/* <div id='brands' > */}
+      {/*New creator platform */}
       <Creator />
-      {/* </div> */}
 
+      {/* Make and impact page*/}
       <Signup />
-      {/* <div id='footer' > */}
+
+      {/* Footer */}
       <Footer />
-      {/* </div> */}
     </div>
   );
 }

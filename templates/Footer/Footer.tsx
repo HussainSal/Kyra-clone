@@ -5,7 +5,6 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer id="footer" className={styles.container}>
-      {/* <div className={styles.innerContainer}> */}
       <div className={styles.text_container}>
         <div className={styles.text_container_inner}>
           <p className={styles.footer_options}>privacy policy</p>
@@ -25,11 +24,9 @@ const Footer = () => {
           width={300}
           height={300}
           alt="logo"
-          // layout="fill"
-          // sizes="(max-width: 900px) 40vw"
+        
         />
       </div>
-      {/* </div> */}
     </footer>
   );
 };

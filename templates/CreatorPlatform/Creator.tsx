@@ -39,28 +39,7 @@ const content = [
   },
 ];
 
-const contentImages = [
-  {
-    id: 1,
-    title: banner1,
-  },
-  {
-    id: 2,
-    title: banner2,
-  },
-  {
-    id: 3,
-    title: banner3,
-  },
-  {
-    id: 4,
-    title: banner4,
-  },
-  {
-    id: 5,
-    title: banner3,
-  },
-];
+
 
 const Creator = () => {
   const [banner, setbanner] = useState<{ id: number; img: StaticImageData }>({

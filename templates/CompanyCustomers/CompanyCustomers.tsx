@@ -12,7 +12,6 @@ import logo6 from "@/assets/images/logo-13.svg";
 import logo7 from "@/assets/images/logo-11.svg";
 import logo8 from "@/assets/images/logo-8.svg";
 import Image from "next/image";
-import Marquee from "react-fast-marquee";
 import useWindowDimensions from "@/utils/hooks/useWindowDimesion";
 
 const imagesData = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8];
@@ -73,10 +72,12 @@ const settings = {
 const CompanyCustomers = () => {
   const [isMobile, setIsMobile] = useState(true);
   const [responsiveCard, setResponsiveCard] = useState(false);
+
+  // taking out width and height from hook
   const {width, height} = useWindowDimensions()
 
   useEffect(() => {
-    // if (isMobile) return;
+    // only use horizontal scoll for desktop devices 
     if (!responsiveCard) {
       let ctx = gsap.context(() => {
         gsap.registerPlugin(GsapScrollTrigger);
@@ -100,17 +101,8 @@ const CompanyCustomers = () => {
     }
   }, [isMobile, responsiveCard]);
 
+  // code for enabling responsiveCard to true which will stop horizontal scrolling
   useEffect(() => {
-    // if (typeof window !== undefined) {
-    //   console.log(window.innerWidth, window.innerHeight, "Checking height");
-    //   if (window.innerWidth <= 600) {
-    //     setResponsiveCard(true);
-    //   }
-
-    //       window.addEventListener("resize", updateDimensions);
-
-    // }
-
      if(width && width <= 500){
       setResponsiveCard(true)
   }else{
@@ -118,10 +110,6 @@ const CompanyCustomers = () => {
   }
 
   }, [width]);
-
-
- 
-  console.log("responsiveCard",width,height)
 
   return (
     <section id="brands" className={styles.section}>
@@ -134,14 +122,12 @@ const CompanyCustomers = () => {
 
         <div className={styles.img_container}>
           <Slider {...settings} className={styles.slide}>
-            {/* <Marquee speed={100}  > */}
             {imagesData.map((item) => (
               <div className={styles.img} key={item}>
                 <Image src={item} alt="logo" />
               </div>
             ))}
           </Slider>
-          {/* </Marquee> */}
         </div>
 
         {!responsiveCard ? (
@@ -162,7 +148,6 @@ const CompanyCustomers = () => {
               <div key={i} className={`${styles.card}`}>
                 <p>{`"${item.text}"`}</p>
                 <h5
-                  // dangerouslySetInnerHTML={{ __html: item.title }}
                   style={{ fontWeight: item.titleWeight }}
                 ></h5>
               </div>

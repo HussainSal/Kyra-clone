@@ -18,9 +18,7 @@ const BannerSelect:React.FC<Props> = ({text}) => {
 
   return (
     <div className={styles.container} onClick={() => setActive((prvstate) => !prvstate)} >
-        {/*  */}
         <div className={styles.text_container} >
-
         <p className={ active ? styles.text : ""} >{text}</p>
         <div className={!active ? styles.details : styles.active_details} >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quo excepturi numquam expedita accusamus architecto beatae similique porro maiores tempore pariatur tempora in incidunt, nihil sapiente. Quos sed doloribus tempora?
