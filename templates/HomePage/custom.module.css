@@ -48,10 +48,10 @@ align-items: center;
 text-align: center;
 color: #BBEF44;
 position: absolute; 
-z-index: 1000;
+/* z-index: 1000; */
 top:20%;
 left:50%; 
- transform: translate(-50% , 0);
+transform: translate(-50% , 0);
 }
 
 .text{
@@ -79,7 +79,7 @@ left:50%;
     background-color: #BBEF44;
     position:absolute;
     bottom: -9px;
-    z-index: 1000;
+    /* z-index: 1000; */
     width: 100vw;
     height: 65px;
     transform: skew(0deg, -.6deg);

@@ -32,10 +32,10 @@ const Navbar: React.FC<{ getSection: (id: string) => void }> = ({
 
   return (
     <nav
-      className={`${styles.container} ${
-        ctx.enableMenu ? styles.overlay : styles.notOverLay
-      }`}
+      className={`${styles.container}`}
     >
+      <div className={ctx.enableMenu ? styles.overlay : styles.notOverLay
+} />
       <div className={styles.imageContainer}>
         <Image src={svg} width={100} height={100} alt="logo" />
       </div>
@@ -57,7 +57,7 @@ const Navbar: React.FC<{ getSection: (id: string) => void }> = ({
       <div
         className={`${
           ctx.enableMenu
-            ? styles.responsive_options_container
+            ? styles.responsive_options_container 
             : styles.responsive_options_hide
         }`}
       >
